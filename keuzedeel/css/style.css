@@ -1,0 +1,495 @@
+@charset "UTF-8";
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  text-align: center;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  background-image: linear-gradient(to right, #d1d1d1 1px, transparent 1px), linear-gradient(to bottom, #d1d1d1 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-position: top left;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 25px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  border-radius: 0 0 15px 15px;
+  background-color: lightblue;
+}
+
+.nav-buttons {
+  display: flex;
+  justify-content: center; /* Knoppen centreren */
+  flex-grow: 1;
+  gap: 15px; /* Standaard afstand tussen knoppen */
+  width: 100%; /* Volledige breedte gebruiken */
+  padding: 0; /* Standaard geen padding */
+}
+
+.nav-button {
+  display: flex;
+  background-color: #f0f0f0;
+  color: #333;
+  border: 1px solid #ddd;
+  padding: 14px 25px;
+  margin: 0 15px; /* Dit zorgt voor links en rechts 15px margin */
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+  width: auto;
+  min-width: 120px;
+  background-color: white;
+  margin-right: 30px; /* Deze overschrijft margin: 0 15px; */
+}
+.nav-button:hover {
+  background-color: #e0e0e0;
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-button {
+    margin-right: 10px; /* Minder ruimte tussen knoppen */
+    padding: 10px 20px; /* Iets minder padding */
+    min-width: 100px; /* Optioneel kleinere knoppen */
+  }
+}
+.welkomspagina {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  padding: 5px;
+  box-sizing: border-box;
+  margin-top: 275px;
+  margin-bottom: 375px;
+}
+
+.square-section {
+  width: 100%;
+  max-width: 900px;
+  height: 500px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: lightblue;
+  padding-left: 20px;
+  border-radius: 15px 15px 15px 15px;
+  margin-left: 165px;
+  margin-top: 100px;
+}
+@media screen and (max-width: 1024px) {
+  .square-section {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+    margin-left: 105px;
+  }
+}
+
+.tekst-sectie {
+  flex: 1;
+  padding: 10px;
+  max-width: 50%;
+}
+
+.inner-square {
+  width: 100%;
+  max-width: 300px;
+  background-color: #e0e0e0;
+  border: 1px solid #888;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-right: 25px;
+}
+.inner-square img {
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
+}
+@media screen and (max-width: 1024px) {
+  .inner-square {
+    width: 60%;
+    max-width: 350px;
+    margin: 10px auto;
+  }
+}
+
+.profile-image {
+  width: 250px;
+  height: 160px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: block;
+  margin: 0 auto;
+}
+
+.projects-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  margin-top: 400px;
+}
+@media screen and (max-width: 1040px) {
+  .projects-title {
+    margin-right: 50px;
+  }
+}
+
+.projectblock {
+  margin-top: 100px;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin-left: 55px;
+  margin-right: auto;
+}
+
+.projects-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  justify-items: center;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1040px) {
+  .projects-section {
+    margin-right: 50px;
+  }
+}
+
+/* Project block style */
+.project-block {
+  background-color: white;
+  border-radius: 10px;
+  border: 2px solid black;
+  height: 200px; /* Keeps the original height */
+  width: 100%; /* Ensures the block takes up full width */
+  max-width: 400px; /* Increased max-width to make the block wider */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin: 10px; /* Adds space between project blocks */
+  overflow: hidden; /* Prevents image from overflowing the block */
+  position: relative; /* Allows positioning of the image */
+  cursor: pointer; /* Makes it look clickable */
+}
+@media screen and (max-width: 1040px) {
+  .project-block {
+    gap: 20px;
+  }
+}
+
+/* Image inside project block */
+.project-block img {
+  width: 500px; /* Ensures the image fills the width of the block */
+  height: 250px; /* Ensures the image fills the height of the block */
+  object-fit: cover; /* Ensures the image fills the block area, cropping allowed */
+  object-position: center; /* Centers the image to keep important parts visible */
+  display: block; /* Removes any unwanted space below the image */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for zoom effect */
+}
+
+/* Hover effect: image zooms in */
+.project-block:hover img {
+  transform: scale(1.2); /* Zooms in the image by 20% */
+  object-position: center; /* Keeps the image focused while zooming */
+}
+
+/* Optional: Hover effect for project block */
+.project-block:hover {
+  box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.3); /* Adds shadow for depth on hover */
+}
+
+.skills-container {
+  display: grid;
+  gap: 30px;
+  justify-content: center;
+  grid-template-columns: repeat(3, 1fr); /* Vier kolommen voor desktop */
+  margin-top: 50px; /* Ruimte tussen skills en andere secties */
+  margin-left: 125px;
+}
+@media screen and (max-width: 1024px) {
+  .skills-container {
+    grid-template-columns: repeat(3, 1fr); /* Drie kolommen voor iPad Pro */
+    margin-right: 125px;
+  }
+}
+
+.skills-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  margin-top: 400px;
+  margin-left: 100px;
+}
+@media screen and (max-width: 1040px) {
+  .skills-title {
+    margin-right: 75px;
+  }
+}
+
+.small-square {
+  background-color: rgb(211, 211, 211);
+  border-radius: 10px;
+  width: 100%;
+  height: 150px;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+  overflow: hidden; /* Zorgt ervoor dat de afbeelding niet buiten het vak komt */
+}
+
+.small-square img {
+  height: 80%;
+  object-fit: cover; /* Schaal de afbeelding binnen de vakken zonder vervorming */
+  object-position: center; /* Zorgt ervoor dat de afbeelding gecentreerd is */
+  display: block; /* Verwijdert eventuele ongewenste ruimte onder de afbeelding */
+}
+
+.inner-square img {
+  width: 120%;
+  height: 250%;
+  object-fit: cover;
+}
+
+.contact-section {
+  display: flex;
+  margin: 20px;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  width: 70%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 500px;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+}
+
+input, textarea {
+  width: 80%;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white; /* ← Vervangt $light-text */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  width: 50%;
+  margin: 0 auto; /* ← Centraal positioneren */
+  display: block; /* Nodig voor margin: auto */
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.social-media-section {
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 1000px;
+  text-align: center;
+  margin-top: 175px;
+}
+@media screen and (max-width: 1040px) {
+  .social-media-section {
+    margin-top: 100px;
+  }
+}
+
+.social-media-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.social-media-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-media-icon img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  transition: transform 0.3s;
+}
+.social-media-icon img:hover {
+  transform: scale(1.1);
+}
+
+.path-image {
+  max-width: 850px;
+  height: 700px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(65, 22, 22, 0.2);
+  margin-top: 400px;
+  margin-left: 300px;
+}
+@media screen and (max-width: 1040px) {
+  .path-image {
+    margin-right: 200px;
+  }
+}
+
+footer {
+  background-color: #ffffff;
+  color: #333;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.custom-error-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #f8f9fa, #e0e0e0);
+  color: #333;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.custom-error-page h1 {
+  font-size: 120px;
+  color: #ff4757;
+  margin-bottom: 10px;
+}
+
+.custom-error-page p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.custom-error-page .button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #1e90ff;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.custom-error-page .button:hover {
+  background-color: #0056b3;
+}
+
+@media screen and (width: 1024px) {
+  .custom-error-page {
+    padding: 80px 50px;
+    background-color: #f8f8f8;
+    text-align: center;
+  }
+  .custom-error-page h1 {
+    font-size: 110px;
+    color: #e74c3c;
+  }
+  .custom-error-page p {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 30px;
+  }
+  .custom-error-page .button {
+    background-color: #3498db;
+    color: white;
+    padding: 16px 36px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+  }
+  .custom-error-page .button:hover {
+    background-color: #2980b9;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
