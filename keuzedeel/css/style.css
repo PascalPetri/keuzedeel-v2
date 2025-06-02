@@ -5,6 +5,7 @@ html {
 
 a {
   text-decoration: none;
+  color: #1e90ff;
 }
 
 h1 {
@@ -124,7 +125,7 @@ nav {
 
 .inner-square {
   width: 100%;
-  max-width: 300px;
+  max-width: 250px;
   background-color: #e0e0e0;
   border: 1px solid #888;
   display: flex;
@@ -135,11 +136,6 @@ nav {
   overflow: hidden;
   margin-right: 25px;
 }
-.inner-square img {
-  width: 100%;
-  height: 90%;
-  object-fit: cover;
-}
 @media screen and (max-width: 1024px) {
   .inner-square {
     width: 60%;
@@ -149,8 +145,8 @@ nav {
 }
 
 .profile-image {
-  width: 250px;
-  height: 160px;
+  width: 300px;
+  height: 300px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   display: block;
@@ -295,6 +291,7 @@ nav {
   width: 120%;
   height: 250%;
   object-fit: cover;
+  display: block; /* Verwijdert eventuele ongewenste ruimte onder de afbeelding */
 }
 
 .contact-section {

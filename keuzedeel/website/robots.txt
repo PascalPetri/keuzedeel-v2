@@ -1,6 +1,4 @@
 User-agent: *
-Disallow: /admin/
-Disallow: /beheer/
+Disallow: /scss/
+Disallow: /foto,s/
 Allow: /
-
-Sitemap: https://jouwdomein.nl/sitemap.xml
